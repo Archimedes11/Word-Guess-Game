@@ -52,13 +52,16 @@
         // FIRST LOOP
 
         if (wins == 0) {
-            for (var i = 0; i < remainingGuesses; remainingGuesses--) {
 
-                document.onkeyup = function (event) {
 
-                    // Determines which key was pressed.
-                    var currentGuess = event.key;
-                    event.stopPropagation();// Gets the event to stop looping.
+
+            document.onkeyup = function (event) {
+                var currentGuess = event.key;
+                
+
+
+                for (var i = 0; i < remainingGuesses; remainingGuesses--) {
+
 
                     document.getElementById("blanks").innerHTML = displayArray;
 
@@ -85,9 +88,14 @@
                     if (currentGuess == willie[5]) {
                         displayArray[5] = 'e';
                     };
-                    
-                    var i = i++;
+
+
                     document.getElementById("blanks").innerHTML = displayArray;
+
+
+
+
+                    
                     
 
 
@@ -102,19 +110,15 @@
 
 
 
-
-
-
-
-
-                    console.log(i);
-                    console.log(displayArray[0]);
-                    console.log(remainingGuesses);
-
+                    console.log("i = " + i);
+                    console.log("array [0] = " + displayArray[0]);
+                    console.log("guesses remaining = " + remainingGuesses);
+                    remainingGuesses--;
+                    return false;
 
 
                 }
-            }
+            };
         }
 
     </script>
