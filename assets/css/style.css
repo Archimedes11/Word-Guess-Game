@@ -1,3 +1,17 @@
+body{background-color: black;}
+
 h2{
-    color:blue;
+    color:white;
+}
+
+#wins-text,
+#win-amount,
+#currentWord-text,
+#blanks,
+#remainingGuesses-text,
+#remainingGuesses-amount,
+#previousGuess-array,
+#previousGuess-text
+{
+ color: white;
 }

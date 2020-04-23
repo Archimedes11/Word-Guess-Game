@@ -55,10 +55,7 @@
                     }
 
 
-                    
-
-
-
+            
                     
                     previousGuess[count] = currentGuess; // adds the current guess to the specific index on previousGuess
 
