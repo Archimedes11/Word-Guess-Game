@@ -8,8 +8,10 @@ var wins = 0;
 var remainingGuesses = 12;
 var remainingGuessesNum = 12;
 var count = 0;
-var songOne = document.getElementById("willieSong");
-var songTwo = document.getElementById("waylonSong");
+var willieSong = new Audio('./assets/songs/redheadedstranger.mp3');
+var waylonSong = new Audio('./assets/songs/outlawbit.mp3');
+
+
 
 
 document.getElementById("remainingGuesses-amount").innerHTML = remainingGuesses; //shows the amounts of guesses remaining.
@@ -126,9 +128,7 @@ document.onkeyup = function (event) {
         var displayArrayString = displayArray.join(' ').trim() //Turns the array into a string for aestethics.
         document.getElementById("blanks").innerHTML = displayArrayString; // shows how many letters they have right and in what order.
         document.getElementById("picture").innerHTML = '<img src="./assets/images/willie.png" alt="Willie Nelson"></img>';
-        function playAudio() { 
-            songOne.play(); 
-          }
+        willieSong.play();
 
 
 
@@ -218,7 +218,8 @@ document.onkeyup = function (event) {
                 }
                 if (wins == 2){
                     document.getElementById("picture").innerHTML = '<img src="./assets/images/waylon.jpg" alt="Waylon Jennings"></img>';
-                
+                    willieSong.pause();
+                    waylonSong.play();
                 }
 
 
