@@ -1,9 +1,14 @@
-body{background-color: black;}
-
-h2{
-    color:white;
+@font-face{
+    font-family: "cowboyjunk";
+    src: url('cowboyjunkDEMO.otf');
 }
 
+
+
+body{background-color: black;}
+
+
+h2,
 #wins-text,
 #win-amount,
 #currentWord-text,
@@ -14,4 +19,5 @@ h2{
 #previousGuess-text
 {
  color: white;
+ font-family: "cowboyjunk";
 }

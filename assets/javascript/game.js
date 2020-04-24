@@ -16,7 +16,8 @@ var waylonSong = new Audio('./assets/songs/outlawbit.mp3');
 
 document.getElementById("remainingGuesses-amount").innerHTML = remainingGuesses; //shows the amounts of guesses remaining.
 document.getElementById("win-amount").innerHTML = wins; //shows how many wins.
-document.getElementById("previousGuess-array").innerHTML = previousGuess; //shows their previous guess.
+var previousGuessString = previousGuess.join(' ').trim() //Turns the array into a string for aestethics.
+document.getElementById("previousGuess-array").innerHTML = previousGuessString; //shows their previous guess.
 var displayArrayString = displayArray.join(' ').trim() //Turns the array into a string for aestethics.
 document.getElementById("blanks").innerHTML = displayArrayString; // shows how many letters they have right and in what order.
 document.getElementById("picture").innerHTML = '<img src="./assets/images/Clint.jpg" alt="Clint"></img>';
@@ -29,7 +30,7 @@ document.onkeyup = function (event) {
 
     //beginning of loop.
     for (i = 0; i < remainingGuesses; remainingGuesses--) {
-    
+
 
 
         // decides if a correct letter was chosen
@@ -87,7 +88,8 @@ document.onkeyup = function (event) {
 
         document.getElementById("remainingGuesses-amount").innerHTML = remainingGuesses; //shows the amounts of guesses remaining.
         document.getElementById("win-amount").innerHTML = wins; //shows how many wins.
-        document.getElementById("previousGuess-array").innerHTML = previousGuess; //shows their previous guess.
+        var previousGuessString = previousGuess.join(' ').trim() //Turns the array into a string for aestethics.
+        document.getElementById("previousGuess-array").innerHTML = previousGuessString; //shows their previous guess.
         var displayArrayString = displayArray.join(' ').trim() //Turns the array into a string for aestethics.
         document.getElementById("blanks").innerHTML = displayArrayString; // shows how many letters they have right and in what order.
 
@@ -124,7 +126,8 @@ document.onkeyup = function (event) {
 
         document.getElementById("remainingGuesses-amount").innerHTML = remainingGuesses; //shows the amounts of guesses remaining.
         document.getElementById("win-amount").innerHTML = wins; //shows how many wins.
-        document.getElementById("previousGuess-array").innerHTML = previousGuess; //shows their previous guess.
+        var previousGuessString = previousGuess.join(' ').trim() //Turns the array into a string for aestethics.
+        document.getElementById("previousGuess-array").innerHTML = previousGuessString; //shows their previous guess.
         var displayArrayString = displayArray.join(' ').trim() //Turns the array into a string for aestethics.
         document.getElementById("blanks").innerHTML = displayArrayString; // shows how many letters they have right and in what order.
         document.getElementById("picture").innerHTML = '<img src="./assets/images/willie.png" alt="Willie Nelson"></img>';
@@ -143,7 +146,7 @@ document.onkeyup = function (event) {
 
 
             for (i = 0; i < remainingGuesses; remainingGuesses--) {
-                
+
 
 
                 // decides if a correct letter was chosen
@@ -201,7 +204,8 @@ document.onkeyup = function (event) {
 
                 document.getElementById("remainingGuesses-amount").innerHTML = remainingGuesses; //shows the amounts of guesses remaining.
                 document.getElementById("win-amount").innerHTML = wins; //shows how many wins.
-                document.getElementById("previousGuess-array").innerHTML = previousGuess; //shows their previous guess.
+                var previousGuessString = previousGuess.join(' ').trim() //Turns the array into a string for aestethics.
+                document.getElementById("previousGuess-array").innerHTML = previousGuessString; //shows their previous guess.
                 var displayArrayString = displayArray.join(' ').trim() //Turns the array into a string for aestethics.
                 document.getElementById("blanks").innerHTML = displayArrayString; // shows how many letters they have right and in what order.
 
@@ -216,7 +220,7 @@ document.onkeyup = function (event) {
                     remainingGuessesNum = 12;
                     count = 0;
                 }
-                if (wins == 2){
+                if (wins == 2) {
                     document.getElementById("picture").innerHTML = '<img src="./assets/images/waylon.jpg" alt="Waylon Jennings"></img>';
                     willieSong.pause();
                     waylonSong.play();
