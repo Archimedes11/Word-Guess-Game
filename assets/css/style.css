@@ -4,9 +4,16 @@
 }
 
 
+#hangmanphoto{
+    padding-left: 275px;
+}
 
 body{background-color: black;}
 
+.winningPic{
+    width: 220px;
+    height: 220px;
+}
 
 h2,
 #wins-text,
@@ -16,8 +23,36 @@ h2,
 #remainingGuesses-text,
 #remainingGuesses-amount,
 #previousGuess-array,
-#previousGuess-text
-{
- color: white;
- font-family: "cowboyjunk";
+#previousGuess-text{
+    color: white;
+    font-family: "cowboyjunk";
+}
+
+#song-text{
+    color: white;
+    font-family: "cowboyjunk";
+    text-align: center;
+    margin-left: 500px;
+    text-size-adjust: 50px;
+}
+
+#left-panel{
+    display: inline-block;
+    margin-left: 200px;
+    border: 10px;
+    border-style: dashed;
+    border-color: white;
+
+}
+
+#right-panel{
+    display: inline-block;
+    border: 10px;
+    border-style: dashed;
+    border-color: white;
+    text-align: center;
+    padding-right: 1px;
+}
+#countrypic{
+    margin-left: 250px;
 }

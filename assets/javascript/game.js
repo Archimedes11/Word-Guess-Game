@@ -10,17 +10,18 @@ var remainingGuessesNum = 12;
 var count = 0;
 var willieSong = new Audio('./assets/songs/redheadedstranger.mp3');
 var waylonSong = new Audio('./assets/songs/outlawbit.mp3');
+var songText = '';
 
 
 
-
+document.getElementById("song-text").innerHTML = songText;
 document.getElementById("remainingGuesses-amount").innerHTML = remainingGuesses; //shows the amounts of guesses remaining.
 document.getElementById("win-amount").innerHTML = wins; //shows how many wins.
 var previousGuessString = previousGuess.join(' ').trim() //Turns the array into a string for aestethics.
 document.getElementById("previousGuess-array").innerHTML = previousGuessString; //shows their previous guess.
 var displayArrayString = displayArray.join(' ').trim() //Turns the array into a string for aestethics.
 document.getElementById("blanks").innerHTML = displayArrayString; // shows how many letters they have right and in what order.
-document.getElementById("picture").innerHTML = '<img src="./assets/images/Clint.jpg" alt="Clint"></img>';
+document.getElementById("picture").innerHTML = '<img src="./assets/images/Clint.jpg" alt="Clint" class="winningPic"></img>';
 
 
 //Gets a keystroke from the user and saves in in "currentGuess"
@@ -85,7 +86,7 @@ document.onkeyup = function (event) {
 
 
         remainingGuesses--;
-
+        document.getElementById("song-text").innerHTML = songText;
         document.getElementById("remainingGuesses-amount").innerHTML = remainingGuesses; //shows the amounts of guesses remaining.
         document.getElementById("win-amount").innerHTML = wins; //shows how many wins.
         var previousGuessString = previousGuess.join(' ').trim() //Turns the array into a string for aestethics.
@@ -123,14 +124,16 @@ document.onkeyup = function (event) {
         remainingGuesses = 13;
         remainingGuessesNum = 13;
         count = 0;
+        songText = 'REDHEADED STRANGER - WILLIE NELSON';
 
+        document.getElementById("song-text").innerHTML = songText;
         document.getElementById("remainingGuesses-amount").innerHTML = remainingGuesses; //shows the amounts of guesses remaining.
         document.getElementById("win-amount").innerHTML = wins; //shows how many wins.
         var previousGuessString = previousGuess.join(' ').trim() //Turns the array into a string for aestethics.
         document.getElementById("previousGuess-array").innerHTML = previousGuessString; //shows their previous guess.
         var displayArrayString = displayArray.join(' ').trim() //Turns the array into a string for aestethics.
         document.getElementById("blanks").innerHTML = displayArrayString; // shows how many letters they have right and in what order.
-        document.getElementById("picture").innerHTML = '<img src="./assets/images/willie.png" alt="Willie Nelson"></img>';
+        document.getElementById("picture").innerHTML = '<img src="./assets/images/willie.png" alt="Willie Nelson" class="winningPic"></img>';
         willieSong.play();
 
 
@@ -202,6 +205,7 @@ document.onkeyup = function (event) {
 
                 remainingGuesses--;
 
+                document.getElementById("song-text").innerHTML = songText;
                 document.getElementById("remainingGuesses-amount").innerHTML = remainingGuesses; //shows the amounts of guesses remaining.
                 document.getElementById("win-amount").innerHTML = wins; //shows how many wins.
                 var previousGuessString = previousGuess.join(' ').trim() //Turns the array into a string for aestethics.
@@ -221,9 +225,10 @@ document.onkeyup = function (event) {
                     count = 0;
                 }
                 if (wins == 2) {
-                    document.getElementById("picture").innerHTML = '<img src="./assets/images/waylon.jpg" alt="Waylon Jennings"></img>';
+                    document.getElementById("picture").innerHTML = '<img src="./assets/images/waylon.jpg" alt="Waylon Jennings" class="winningPic"></img>';
                     willieSong.pause();
                     waylonSong.play();
+                    songText = 'OUTLAW BIT - WAYLON JENNINGS';
                 }
 
 
